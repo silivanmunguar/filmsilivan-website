@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("../../images/background/bw_word_map_sketch.jpg");
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+}
+
+
+/* Welcome Page cotent */
+
+
+.welcomeBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+    min-height: 100vh;
+
+}
+
+/* Selection Content */
+
+.locationContent{
+    display: none;
+}
+
+.locationButtons{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 120px 120px 120px ;
+    padding: none;
+    column-gap: 5%;
+}
+
+.africanButton{
+    display:inline-block;
+    background-image: linear-gradient(to right, black 50%, transparent 0);
+    background-color: transparent;
+    background-size: 200% 200px;
+    background-position: right;
+    background-origin: border-box;
+    border:  dotted black;
+    border-radius: 25px;
+    cursor: pointer;
+    color: wheat;
+    padding: 8px;
+    font-size: 18px;
+    ;
+    transition: background-position .5s;
+    
+    
+}
+.europeanButton{
+    display:inline-block;
+    background-image: linear-gradient(to right, black 50%, transparent 0);
+    background-color: transparent;
+    background-size: 200% 200px;
+    background-position: right;
+    background-origin: border-box;
+    border:  dotted black;
+    border-radius: 25px;
+    cursor: pointer;
+    color: wheat;
+    padding: 8px;
+    font-size: 16px;
+    transition: background-position .5s;
+}
+
+.americasButton{
+    position: relative;
+    display: inline-block;
+    background-image: linear-gradient(to right, black 50%, transparent 0);
+    background-color: transparent;
+    background-size: 200% 200px;
+    background-position: right;
+    background-origin: border-box;
+    border:  dotted black;
+    border-radius: 25px;
+    cursor: pointer;
+    color: wheat;
+    padding: 8px;
+    font-size: 16px;
+    transition: background-position .5s;
+}
+
+
+/* IMPLIMENTS EXPLORE BUTTON */
+.exploreButton [type=submit]{
+    position: relative;
+    display: inline-block;
+    background-image: linear-gradient(to right, black 50%, transparent 0);
+    background-color: transparent;
+    background-size: 200% 200px;
+    background-position: right;
+    background-origin: border-box;
+    border: dotted black;
+    border-radius: 25px;
+    width: 50%;
+    margin-top: 20%;
+    padding: 8px;
+    font-size: 14px;
+    transition: background-position .5s;
+    visibility: hidden;
+}
+/* Mobile Resposive */
+@media only screen and (max-width: 600px) {
+    [class*="col-"] {
+      width: 100%;
+    }
+
+}
