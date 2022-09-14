@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/css/styleafrica.css">
+
+    <!-- Custom Icons -->
+    <script src="https://kit.fontawesome.com/6855429c2d.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../images/icons/planet-earth.png" type="image/x-icon">
+    <title>Explore Africa</title>
+</head>
+<body class="mainContent">
+    <header>
+        <div class="buttons">
+            <div  tabindex="2" class="button button-1 activeButton" data-id="zmb">
+                <p>Zambia</p>
+            </div>
+            <div tabindex="3" class="button button-2" data-id="sa" >
+                <p>South Africa</p>
+            </div>
+            <div tabindex="1" class="nav back"  onclick="history.back()"  name="homebutton">
+                <a href="../index.html"><span><img class="icons" src="../images/icons/arrow-left-circle.svg" alt="arrow icon"> Home </span></a>
+            </div> 
+            <div tabindex="4" class="nav next" data-id="back" >
+                <a href="./americas.html" >Americas <span><img src="../images/icons/arrow-right-circle.svg" alt="arrow icon"></span></a>
+            </div>  
+        </div>
+    </header>
+    
+    <main>
+        <section class="section sec-1  zambia active" id="zmb">
+            <div class="images">
+                <div class="image1">
+                    <img tabindex="5" src="../images/africa/Zambia/kafue bridge.jpg" alt="kafue river bridge">
+                    <div class="textcontent">
+                        <h2>Kafue River bridge</h2>
+                        <p>The Kafue River is the longest river lying wholly within Zambia at about 1,576 kilometres long.</p>
+                    </div>
+                </div>
+                <div class="downloadButton1">
+                    <div>
+                        <a tabindex="6" id="downloadbtn" href="../images/africa/Zambia/kafue bridge.jpg" download>
+                            <img id="downlaodIcon" src="../images/icons/download-cloud.svg" alt="download icon">
+                            <div id="buttond1" class="buttond1"><p>Download</p></div></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="image2">
+                        <div class="textcontent">
+                            <h2>Dashiki</h2>
+                            <p>The dashiki is a colorful garment that covers the top half of the body, worn mostly in West Africa. 
+                                It is also known as a Kitenge in East Africa and is a common item of clothing in Tanzania and Kenya</p>
+                        </div>
+                        <img tabindex="7" src="../images/africa/Zambia/dashiki.jpg" alt="image from zambia">
+                    </div>
+                    <div class="downloadButton2">
+                        <div>
+                            <a tabindex="8" id="downloadbtn" href="../images/africa/Zambia/dashiki.jpg" download>
+                                <img id="downlaodIcon" src="../images/icons/download-cloud.svg" alt="download icon">
+                                <div id="buttond2" class="buttond2"><p>Download</p></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section sec-2 southafrica" id="sa" >
+            <div class="xyz">
+                <h2>coming soon . . .</h2>
+            </div>
+        </section>
+    <footer>
+    </footer>
+    <script src="../static/js/app.js"></script>
+</body>
+</html>

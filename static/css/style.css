@@ -1,8 +1,12 @@
+/* Reset page properties */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-[class*="col-"] {
+/* Divide the  page into 12 colums */
+[class*="col-"] {   
     float: left;
     padding: 15px;
     border: 1px solid red;
@@ -20,97 +24,102 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+/* CSS Custom Variables */
+:root{
+    --prim-color: white;
+    --sec-color: black;
+    --text-color1:wheat;
+    --textcolor2:var(--prim-color);
+    --trans-gradient: linear-gradient(to right, rgba(255, 255, 255, 0.779) 50%, transparent 0);
+    --button-shadow: 0px 15px 20px rgba(36, 37, 36, 7);
+    --float-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    --box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
-body{
-    margin: 0;
+
+.mainContent{
     min-height: 100vh;
     width: 100%;
     background-image: url("../../images/background/bw_word_map_sketch.jpg");
     background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    backdrop-filter: blur(8px);
     background-position: center;
-    backdrop-filter: blur(5px);
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-
 }
 
 
-/* Welcome Page cotent */
+/* Buttons */
 
+/* .buttons{
+    display:inline-block;
+    background-image: linear-gradient(to right, black 50%, transparent 0);
+    background-color: transparent;
+    background-size: 200% 200px;
+    background-position: right;
+    background-origin: border-box;
+    border:  dotted black;
+    border-radius: 25px;
+    cursor: pointer;
+    color: wheat;
+    padding: 8px;
+    font-size: 16px;
+    transition: background-position .5s;
+} */
 
-.welcomeBox{
+.buttons{
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,0);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;  
-    min-height: 100vh;
-
+    padding:0;
+    width: fit-content;
+    background-color:transparent;
+    margin: 0;
+    border-radius: 25px;
 }
 
-/* Selection Content */
+.button{
+    /* Text side of things */
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color:var(--text-color1);
 
-.locationContent{
-    display: none;
-}
-
-.locationButtons{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 120px 120px 120px ;
-    padding: none;
-    column-gap: 5%;
-}
-
-.africanButton{
+    /* Button side of things */
     display:inline-block;
-    background-image: linear-gradient(to right, black 50%, transparent 0);
+    background-image: var(--trans-gradient);
     background-color: transparent;
     background-size: 200% 200px;
     background-position: right;
     background-origin: border-box;
-    border:  dotted black;
+    border: dotted var(--prim-color);
+    box-shadow: var(--button-shadow) ;
     border-radius: 25px;
     cursor: pointer;
-    color: wheat;
-    padding: 8px;
-    font-size: 18px;
-    ;
     transition: background-position .5s;
-    
-    
-}
-.europeanButton{
-    display:inline-block;
-    background-image: linear-gradient(to right, black 50%, transparent 0);
-    background-color: transparent;
-    background-size: 200% 200px;
-    background-position: right;
-    background-origin: border-box;
-    border:  dotted black;
-    border-radius: 25px;
-    cursor: pointer;
-    color: wheat;
-    padding: 8px;
-    font-size: 16px;
-    transition: background-position .5s;
+    padding: 10px 20px;
+    margin-right: 20px;
 }
 
-.americasButton{
-    position: relative;
-    display: inline-block;
-    background-image: linear-gradient(to right, black 50%, transparent 0);
-    background-color: transparent;
-    background-size: 200% 200px;
-    background-position: right;
-    background-origin: border-box;
-    border:  dotted black;
-    border-radius: 25px;
-    cursor: pointer;
-    color: wheat;
-    padding: 8px;
-    font-size: 16px;
-    transition: background-position .5s;
+.button:hover{
+    box-shadow:var(--float-shadow);
+    border: solid black; 
+    color: rgb(0, 0, 0);
+    background-position: left;
+}
+
+
+
+img{
+    border: none;
+    outline: none;
+}
+
+img:hover{
+    background-color: aqua;
 }
 
 
@@ -118,7 +127,7 @@ body{
 .exploreButton [type=submit]{
     position: relative;
     display: inline-block;
-    background-image: linear-gradient(to right, black 50%, transparent 0);
+    background-image: var(--trans-gradient);
     background-color: transparent;
     background-size: 200% 200px;
     background-position: right;
